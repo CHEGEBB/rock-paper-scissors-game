@@ -2,12 +2,17 @@ $card-color:#f0f0f0;
 $Text-color:hsl(229, 25%, 31%);
 
 .Rules-container{
+    padding: 20px;
+    margin-left: 35%;
+    margin-top: 50px;
     .rules{
         display: flex;
         width: 300px;
         height: 400px;
         background-color: $card-color;
         color: $Text-color;
+        border-radius: 8px;
+        padding: 10px;
     }
    
 }
