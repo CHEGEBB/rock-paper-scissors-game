@@ -5,7 +5,10 @@ import '../sass/rules.scss';
 const Rules = () => {
     return ( 
         <div className="Rules-container">
-            <h1>Rules</h1>
+        <div className="rules">
+        <h1>Rules</h1>
+        </div>
+            
         </div>
      );
 }
