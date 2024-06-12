@@ -15,24 +15,35 @@ $Text-color:hsl(229, 25%, 31%);
         padding: 10px;
         .rules-content{
             display: flex;
-            flex-wrap: wrap;
+            flex-direction: column;
             column-gap: 5rem;
             width: 200px;
             height: 300px;
             margin-top: 90px;
-
-            :nth-child(3){
-                grid-column: 1/ span 1;
-                margin-left: 50px;
-            }
-            .paper{
-                background-color:aquamarine;
-                border-radius: 50%;
-                width: 100px;
-                height: 100px;
-                justify-content: center;
+            .row1{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
                 align-items: center;
+                .paper{
+                    background-color:aquamarine;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    justify-content: center;
+                    align-items: center;
+                }
+                .scissors{
+                    background-color:red;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    justify-content: center;
+                    align-items: center;
+                }
+    
             }
+           
         }
     }
    
