@@ -4,11 +4,11 @@ $Text-color:hsl(229, 25%, 31%);
 .Rules-container{
     padding: 20px;
     margin-left: 35%;
-    margin-top: 20%;
+    margin-top: 10%;
     .rules{
         display: flex;
-        width: 380px;
-        height: 380px;
+        width: 350px;
+        height: 370px;
         background-color: $card-color;
         color: $Text-color;
         border-radius: 8px;
