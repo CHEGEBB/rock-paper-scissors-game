@@ -17,7 +17,6 @@ $Text-color:hsl(229, 25%, 31%);
             display: flex;
             flex-wrap: wrap;
             column-gap: 5rem;
-            background-color: green;
             width: 200px;
             height: 300px;
             margin-top: 90px;
@@ -25,6 +24,14 @@ $Text-color:hsl(229, 25%, 31%);
             :nth-child(3){
                 grid-column: 1/ span 1;
                 margin-left: 50px;
+            }
+            .paper{
+                background-color:aquamarine;
+                border-radius: 50%;
+                width: 100px;
+                height: 100px;
+                justify-content: center;
+                align-items: center;
             }
         }
     }
