@@ -43,6 +43,20 @@ $Text-color:hsl(229, 25%, 31%);
                 }
     
             }
+            .row2{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                .rock{
+                    background-color:blue;
+                    border-radius: 50%;
+                    width: 100px;
+                    height: 100px;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
            
         }
     }
