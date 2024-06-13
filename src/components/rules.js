@@ -4,6 +4,7 @@ import Paper from "../images/icon-paper.svg";
 import Scissors from "../images/icon-scissors.svg";
 import Rock from "../images/icon-rock.svg";
 import ArrowLeft from "../images/pajamas--arrow-left.svg";
+import Rightarrow from "../images/pajamas--long-arrow.svg";
 
 const Rules = () => {
   return (
@@ -22,18 +23,25 @@ const Rules = () => {
                 <img src={ArrowLeft} alt="paper" />
               </div>
               </div>
+              <div className="rule2">
             <div className="scissors">
               <div className="scissor">
                 <img src={Scissors} alt="paper" />
               </div>
             </div>
+            </div>
           </div>
+
           <div className="row2">
+          <div className="left-side-arrow">
+              <img src={Rightarrow} alt="paper" />
+            </div>
             <div className="rock-content">
               <div className="rock">
                 <img src={Rock} alt="paper" />
               </div>
             </div>
+            
           </div>
         </div>
       </div>
