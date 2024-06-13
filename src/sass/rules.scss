@@ -63,7 +63,7 @@ $dark-green: #006400;
         .rules-content{
             display: flex;
             flex-direction: column;
-            column-gap: 5rem;
+            gap: 30px;
             width: 200px;
             height: 300px;
             margin-top: 90px;
@@ -72,15 +72,15 @@ $dark-green: #006400;
                 flex-direction: row;
                 align-items: center;
                 width: 500px;
-                margin-left: -40px;
-                gap: 40px;
+                margin-left: -60px;
+                gap: 80px;
 
                 .paper{
                     background-color:$light-steel-blue;
                     border-radius: 50%;
                     border: 15px solid $border;
-                    width: 100px;
-                    height: 100px;
+                    width: 90px;
+                    height: 90px;
                     justify-content: center;
                     align-items: center;
                     img{
@@ -93,8 +93,8 @@ $dark-green: #006400;
                     background-color:$light-steel-blue;
                     border-radius: 50%;
                     border: 15px solid $border;
-                    width: 100px;
-                    height: 100px;
+                    width: 90px;
+                    height: 90px;
                     justify-content: center;
                     align-items: center;
                     img{
@@ -114,8 +114,8 @@ $dark-green: #006400;
                     background-color:$light-steel-blue;
                     border-radius: 50%;
                     border: 15px solid $border;
-                    width: 100px;
-                    height: 100px;
+                    width: 90px;
+                    height: 90px;
                     justify-content: center;
                     align-items: center;
                     img{
