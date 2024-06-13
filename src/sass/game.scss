@@ -31,6 +31,7 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     height: 140px;
     justify-content: center;
     align-items: center;
+    box-shadow:  0 0 20px  rgba(197, 26, 26, 0.2);
 }
 
 
@@ -50,7 +51,8 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
         margin-top: 40px !important;
         .paper {
             @include element;
-            border : 20px solid hsl(230, 89%, 62%) ;
+            border : 20px solid hsl(230, 89%, 65%) ;
+            box-shadow: 0 12px 0  hsl(230, 89%, 62%);
           
             img {
                 justify-content: center;
