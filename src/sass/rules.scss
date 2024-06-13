@@ -126,8 +126,9 @@ $dark-green: #006400;
                 justify-content: center;
                 .left-side-arrow {
                     transform: rotate(45deg);
+                    margin-top: -100px;
                     img {
-                        width: 100px;
+                        width: 80px;
                         height: 50px;
                       }
                       

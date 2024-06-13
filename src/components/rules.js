@@ -29,6 +29,9 @@ const Rules = () => {
                 <img src={Scissors} alt="paper" />
               </div>
             </div>
+            <div className="right-side-arrow">
+              <img src={ArrowLeft} alt="paper" />
+            </div>
             </div>
           </div>
 
