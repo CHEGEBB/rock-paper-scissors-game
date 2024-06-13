@@ -3,6 +3,7 @@ import "../sass/rules.scss";
 import Paper from "../images/icon-paper.svg";
 import Scissors from "../images/icon-scissors.svg";
 import Rock from "../images/icon-rock.svg";
+import ArrowLeft from "../images/pajamas--arrow-left.svg";
 
 const Rules = () => {
   return (
@@ -11,11 +12,16 @@ const Rules = () => {
         <h1>Rules</h1>
         <div className="rules-content">
           <div className="row1">
+          <div className="rule1">
             <div className="paper">
               <div className="hand">
                 <img src={Paper} alt="paper" />
               </div>
             </div>
+            <div className="arrow-left">
+                <img src={ArrowLeft} alt="paper" />
+              </div>
+              </div>
             <div className="scissors">
               <div className="scissor">
                 <img src={Scissors} alt="paper" />

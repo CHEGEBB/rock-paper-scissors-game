@@ -1,6 +1,6 @@
 $card-color:#f0f0f0;
 $Text-color:hsl(229, 25%, 31%);
-$border:hsl(225, 6%, 74%);
+$border:hsl(224, 16%, 73%);
 
 
 $light-salmon: #ffa07a;
@@ -74,6 +74,19 @@ $dark-green: #006400;
                 width: 500px;
                 margin-left: -60px;
                 gap: 80px;
+                .rule1{
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    .arrow-left{
+                        width: 20px;
+                        height: 20px;
+                        img{
+                            width: 100px;
+                            height: 50px;
+                        }
+                    }
+                }
 
                 .paper{
                     background-color:$light-steel-blue;
@@ -83,6 +96,7 @@ $dark-green: #006400;
                     height: 90px;
                     justify-content: center;
                     align-items: center;
+                   
                     img{
                         justify-content: center;
                         align-items: center;
