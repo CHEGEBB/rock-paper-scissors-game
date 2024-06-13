@@ -103,6 +103,14 @@ $dark-green: #006400;
                         position: relative;
                         top: 60px;
                         right: 170px;
+                        .beat-text{
+                            position: absolute;
+                            top: -40px; 
+                            text-align: center;
+                            left: 30px;
+                            transform: rotate(240deg);
+  
+                        }
                         
                         img {
                             width: 80px;

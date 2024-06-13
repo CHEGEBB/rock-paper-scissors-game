@@ -31,6 +31,7 @@ const Rules = () => {
               </div>
             </div>
             <div className="right-side-arrow">
+            <p className="beat-text">Beats</p>
               <img src={ArrowLeft} alt="paper" />
             </div>
             </div>
