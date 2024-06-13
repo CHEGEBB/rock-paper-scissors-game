@@ -20,6 +20,7 @@ const Rules = () => {
               </div>
             </div>
             <div className="arrow-left">
+            <p className="beats-text">Beats</p>
                 <img src={ArrowLeft} alt="paper" />
               </div>
               </div>
