@@ -1,4 +1,5 @@
-
+import React from 'react';
+import '../sass/header.scss';
 
 const header = () => {
     return ( 
