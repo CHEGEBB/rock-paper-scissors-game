@@ -159,10 +159,10 @@ $dark-green: #006400;
           right: 30px;
           .beat2-text{
             position: absolute;
-            top: -40px;
+            top: 40px;
             text-align: center;
-            left: 30px;
-            transform: rotate(45deg);
+            right: 20px;
+            transform: rotate(-45deg);
           }
           img {
             width: 80px;
