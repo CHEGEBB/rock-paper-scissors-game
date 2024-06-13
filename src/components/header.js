@@ -16,7 +16,8 @@ const header = () => {
                 </div>
             </div>
             <div className="score">
-                <h1>Score</h1>
+                <p>Score</p>
+                <h1>12</h1>
             </div>
         </div>
      );

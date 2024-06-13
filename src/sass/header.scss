@@ -35,14 +35,14 @@ $Barlow-font: "Barlow Semi Condensed", sans-serif;
 .header{
     width: 600px !important;
     height: 100px !important;
-    border: 2px solid #ccc !important;
+    border: 3px solid  hsl(217, 16%, 45%) !important;
     margin: 0 auto!important;
     padding: 20px!important;
     margin-top: 80px !important;
     border-radius: 12px !important;
     display: flex;
     flex-direction: row;
-    gap: 70px !important;
+    gap: 370px !important;
     font-family: $Barlow-font;
     color: #fff;
     .intro{
@@ -61,6 +61,15 @@ $Barlow-font: "Barlow Semi Condensed", sans-serif;
         }
         .scissors{
             @include game-elements;
+        }
+    }
+    .score{
+        background-color: #fff;
+        width: 200px !important;
+        height: 100px !important;
+        border-radius: 7px;
+        p{
+            color: hsl(229, 64%, 46%);
         }
     }
 }
