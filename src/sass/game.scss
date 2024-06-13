@@ -50,7 +50,7 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
         margin-top: 40px !important;
         .paper {
             @include element;
-            border : 8px solid hsl(230, 89%, 62%) ;
+            border : 20px solid hsl(230, 89%, 62%) ;
           
             img {
                 justify-content: center;
