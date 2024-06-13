@@ -1,7 +1,6 @@
-$card-color:#f0f0f0;
-$Text-color:hsl(229, 25%, 31%);
-$border:hsl(224, 16%, 73%);
-
+$card-color: #f0f0f0;
+$Text-color: hsl(229, 25%, 31%);
+$border: hsl(224, 16%, 73%);
 
 $light-salmon: #ffa07a;
 $coral: #ff7f50;
@@ -48,144 +47,145 @@ $forest-green: #228b22;
 $sea-green: #2e8b57;
 $dark-green: #006400;
 
-.Rules-container{
-    padding: 20px;
-    margin-left: 35%;
-    margin-top: 10%;
-    .rules{
+.Rules-container {
+  padding: 20px;
+  margin-left: 35%;
+  margin-top: 10%;
+  .rules {
+    display: flex;
+    width: 350px;
+    height: 370px;
+    background-color: $card-color;
+    color: $Text-color;
+    border-radius: 8px;
+    padding: 10px;
+    .rules-content {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      width: 200px;
+      height: 300px;
+      margin-top: 90px;
+      .row1 {
         display: flex;
-        width: 350px;
-        height: 370px;
-        background-color: $card-color;
-        color: $Text-color;
-        border-radius: 8px;
-        padding: 10px;
-        .rules-content{
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-            width: 200px;
-            height: 300px;
-            margin-top: 90px;
-            .row1{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                width: 500px;
-                margin-left: -60px;
-                gap: 50px;
-                .rule1{
-                    display: flex;
-                    flex-direction: row;
-                    align-items: center;
-                    .arrow-left{
-                        width: 20px;
-                        height: 20px;
-                        position: relative;
-                        right: 10px;
-                        .beats-text {
-                            position: absolute;
-                            top: -30px; 
-                            text-align: center;
-                            left: 30px;
-                          }
-                        img{
-                            width: 100px;
-                            height: 50px;
-                        }
-                    }
-                }
-                .rule2{
-                    display: flex;
-                    flex-direction: row;
-                    .right-side-arrow {
-                        transform: rotate(-240deg);
-                        position: relative;
-                        top: 60px;
-                        right: 170px;
-                        .beat-text{
-                            position: absolute;
-                            top: -40px; 
-                            text-align: center;
-                            left: 30px;
-                            transform: rotate(240deg);
-  
-                        }
-                        
-                        img {
-                            width: 80px;
-                            height: 50px;
-                          }
-                          
-                      }
-
-                }
-
-                .paper{
-                    background-color:$light-steel-blue;
-                    border-radius: 50%;
-                    border: 15px solid $border;
-                    width: 90px;
-                    height: 90px;
-                    justify-content: center;
-                    align-items: center;
-                   
-                    img{
-                        justify-content: center;
-                        align-items: center;
-                        padding: 20px;
-                    }
-                }
-                .scissors{
-                    background-color:$light-steel-blue;
-                    border-radius: 50%;
-                    border: 15px solid $border;
-                    width: 90px;
-                    height: 90px;
-                    justify-content: center;
-                    align-items: center;
-                    img{
-                        justify-content: center;
-                        align-items: center;
-                        padding: 20px;
-                    }
-                }
-    
+        flex-direction: row;
+        align-items: center;
+        width: 500px;
+        margin-left: -60px;
+        gap: 50px;
+        .rule1 {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .arrow-left {
+            width: 20px;
+            height: 20px;
+            position: relative;
+            right: 10px;
+            .beats-text {
+              position: absolute;
+              top: -30px;
+              text-align: center;
+              left: 30px;
             }
-            .row2{
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: center;
-                .left-side-arrow {
-                    transform: rotate(45deg);
-                    position: relative;                    bottom: 70px;
-                    right: 30px;
-                    img {
-                        width: 80px;
-                        height: 50px;
-                      }
-                      
-                  }
-                 
-                .rock{
-                    background-color:$light-steel-blue;
-                    border-radius: 50%;
-                    border: 15px solid $border;
-                    width: 90px;
-                    height: 90px;
-                    justify-content: center;
-                    align-items: center;
-                    margin-left: -70px;
-                    img{
-                        justify-content: center;
-                        align-items: center;
-                        padding: 20px;
-                    }
-                }
+            img {
+              width: 100px;
+              height: 50px;
             }
-           
+          }
         }
+        .rule2 {
+          display: flex;
+          flex-direction: row;
+          .right-side-arrow {
+            transform: rotate(-240deg);
+            position: relative;
+            top: 60px;
+            right: 170px;
+            .beat-text {
+              position: absolute;
+              top: -40px;
+              text-align: center;
+              left: 30px;
+              transform: rotate(240deg);
+            }
+
+            img {
+              width: 80px;
+              height: 50px;
+            }
+          }
+        }
+
+        .paper {
+          background-color: $light-steel-blue;
+          border-radius: 50%;
+          border: 15px solid $border;
+          width: 90px;
+          height: 90px;
+          justify-content: center;
+          align-items: center;
+
+          img {
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+          }
+        }
+        .scissors {
+          background-color: $light-steel-blue;
+          border-radius: 50%;
+          border: 15px solid $border;
+          width: 90px;
+          height: 90px;
+          justify-content: center;
+          align-items: center;
+          img {
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+          }
+        }
+      }
+      .row2 {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        .left-side-arrow {
+          transform: rotate(45deg);
+          position: relative;
+          bottom: 70px;
+          right: 30px;
+          .beat2-text{
+            position: absolute;
+            top: -40px;
+            text-align: center;
+            left: 30px;
+            transform: rotate(45deg);
+          }
+          img {
+            width: 80px;
+            height: 50px;
+          }
+        }
+
+        .rock {
+          background-color: $light-steel-blue;
+          border-radius: 50%;
+          border: 15px solid $border;
+          width: 90px;
+          height: 90px;
+          justify-content: center;
+          align-items: center;
+          margin-left: -70px;
+          img {
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+          }
+        }
+      }
     }
-   
+  }
 }

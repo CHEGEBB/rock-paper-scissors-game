@@ -39,6 +39,7 @@ const Rules = () => {
 
           <div className="row2">
           <div className="left-side-arrow">
+          <p className="beat2-text">Beats</p>
               <img src={Rightarrow} alt="paper" />
             </div>
             <div className="rock-content">
