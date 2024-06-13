@@ -6,7 +6,7 @@ import Rock from "../images/icon-rock.svg";
 import ArrowLeft from "../images/pajamas--arrow-left.svg";
 import Rightarrow from "../images/pajamas--long-arrow.svg";
 import { useState } from "react";
-
+import close from '../images/gg--close.svg';
 const Rules = () => {
 const [isVisible,setIsVisible] =useState(true);
 
@@ -18,10 +18,15 @@ const handleClose= () =>{
     <div className="Rules-container">
     {isVisible && (
       <div className="rules">
+      <div className="top">
+        <div className="name">
         <h1>Rules</h1>
+        </div>
         <span className="close-button" onClick={handleClose}>
-            X
+            <img src ={close} alt="Close" />
           </span>
+      </div>
+       
         <div className="rules-content">
           <div className="row1">
           <div className="rule1">
