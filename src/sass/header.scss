@@ -24,6 +24,11 @@ $powder-blue: #b0e0e6;
 $light-blue: #add8e6;
 $Barlow-font: "Barlow Semi Condensed", sans-serif;
 
+@mixin game-elements{
+    width: 80px !important;
+    height: 30px;
+}
+
 
 .header{
     width: 600px !important;
@@ -33,4 +38,22 @@ $Barlow-font: "Barlow Semi Condensed", sans-serif;
     padding: 20px!important;
     margin-top: 80px !important;
     border-radius: 12px !important;
+    display: flex;
+    flex-direction: row;
+    gap: 70px !important;
+    .intro{
+        display: flex !important;
+        flex-direction: column !important;
+        height: 100px !important;
+        background-color: red;
+        .rock{
+            @include game-elements;
+        }
+        .paper{
+            @include game-elements;
+        }
+        .scissors{
+            @include game-elements;
+        }
+    }
 }
