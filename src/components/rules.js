@@ -5,12 +5,23 @@ import Scissors from "../images/icon-scissors.svg";
 import Rock from "../images/icon-rock.svg";
 import ArrowLeft from "../images/pajamas--arrow-left.svg";
 import Rightarrow from "../images/pajamas--long-arrow.svg";
+import { useState } from "react";
 
 const Rules = () => {
+const [isVisible,setIsVisible] =useState(true);
+
+const handleClose= () =>{
+  setIsVisible(false);
+}
+
   return (
     <div className="Rules-container">
+    {isVisible && (
       <div className="rules">
         <h1>Rules</h1>
+        <span className="close-button" onClick={handleClose}>
+            X
+          </span>
         <div className="rules-content">
           <div className="row1">
           <div className="rule1">
@@ -51,6 +62,7 @@ const Rules = () => {
           </div>
         </div>
       </div>
+    )}
     </div>
   );
 };
