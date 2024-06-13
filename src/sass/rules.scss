@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 $card-color: #f0f0f0;
 $Text-color: hsl(229, 25%, 31%);
 $border: hsl(224, 16%, 73%);
@@ -46,11 +47,13 @@ $lime: #00ff00;
 $forest-green: #228b22;
 $sea-green: #2e8b57;
 $dark-green: #006400;
+$Barlow-font: "Barlow Semi Condensed", sans-serif;
 
 .Rules-container {
   padding: 20px;
   margin-left: 35%;
   margin-top: 10%;
+  font-size: $Barlow-font;
   .rules {
     display: flex;
     width: 350px;
@@ -59,6 +62,13 @@ $dark-green: #006400;
     color: $Text-color;
     border-radius: 8px;
     padding: 10px;
+    h1 {
+      font-family: $Barlow-font;
+      font-size: 30px;
+      font-weight: 700;
+      color: $Text-color;
+      text-transform: uppercase;
+    }
     .rules-content {
       display: flex;
       flex-direction: column;
@@ -83,6 +93,11 @@ $dark-green: #006400;
             position: relative;
             right: 10px;
             .beats-text {
+              font-family: $Barlow-font;
+              font-size: 16px;
+              font-weight: 700;
+              text-transform: uppercase;
+              color: $border;
               position: absolute;
               top: -30px;
               text-align: center;
@@ -103,6 +118,11 @@ $dark-green: #006400;
             top: 60px;
             right: 170px;
             .beat-text {
+              font-family: $Barlow-font;
+              font-size: 16px;
+              font-weight: 700;
+              text-transform: uppercase;
+              color: $border;
               position: absolute;
               top: -40px;
               text-align: center;
@@ -157,7 +177,12 @@ $dark-green: #006400;
           position: relative;
           bottom: 70px;
           right: 30px;
-          .beat2-text{
+          .beat2-text {
+            font-family: $Barlow-font;
+            font-size: 16px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: $border;
             position: absolute;
             top: 40px;
             text-align: center;
