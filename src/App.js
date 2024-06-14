@@ -12,6 +12,10 @@ function App() {
     <div className="game-content">
     <Game/>
       {/* <Rules /> */}
+
+      <div className="rules-toggle-button">
+        <button>Rules</button>
+      </div>
     </div>
     
     </div>
