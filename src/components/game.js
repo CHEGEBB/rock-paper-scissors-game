@@ -1,9 +1,9 @@
 import React from 'react';
 import '../sass/game.scss';
-import Paper from '../images/icon-paper.svg';
 import Scissors from '../images/icon-scissors.svg';
 import Rock from '../images/icon-rock.svg';
 import Triangle from '../images/bg-triangle.svg';
+import PaperComponent from '../components/paper';
 const game = () => {
     return ( 
         <div className="game-container">
@@ -12,10 +12,8 @@ const game = () => {
           <img src={Triangle} alt="triangle" />
         
         <div className="choices-row-one">
-            <div className="paper">
-              <div className="hand">
-                <img src={Paper} alt="paper" />
-              </div>
+            <div className="paper-container">
+              <PaperComponent />
             </div>
             <div className="scissors">
               <div className="scissor">
