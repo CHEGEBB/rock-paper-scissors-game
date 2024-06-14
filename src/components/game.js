@@ -14,6 +14,9 @@ const game = () => {
                 <img src={Paper} alt="paper" />
               </div>
             </div>
+            <div className="rectangle">
+              rect
+            </div>
             <div className="scissors">
               <div className="scissor">
                 <img src={Scissors} alt="paper" />
