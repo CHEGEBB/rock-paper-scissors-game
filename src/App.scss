@@ -11,6 +11,11 @@ body {
   width: 100vw;
   overflow: hidden;
 }
+.game-content{
+  .rules{
+    margin-left: 13px;
+    margin-top: -80px;
+  }
 .rules-toggle-button{
   position: absolute;
   bottom: 80px;
@@ -31,4 +36,5 @@ body {
       cursor: pointer;
     }
   }
+}
 }
