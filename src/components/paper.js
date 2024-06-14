@@ -1,16 +1,23 @@
-
-import React from 'react';
-import Paper from '../images/icon-paper.svg';
+// PaperComponent.js
+import React, { useContext } from 'react';
+import PaperIcon from '../images/icon-paper.svg'; // Adjust path as necessary
 import '../sass/paper.scss';
+import { GameContext } from '../context/GameContext';
 
-const paper = () => {
-    return ( 
-        <div className="paper">
-        <div className="hand">
-          <img src={Paper} alt="paper" />
-        </div>
+const PaperComponent = () => {
+  const { selectedChoice, setSelectedChoice } = useContext(GameContext);
+
+  const handleClick = () => {
+    setSelectedChoice('Paper');
+  };
+
+  return (
+    <div className="paper" onClick={handleClick}>
+      <div className={`hand ${selectedChoice === 'Paper' ? 'selected' : 'hidden'}`}>
+        <img src={PaperIcon} alt="Paper" />
       </div>
-     );
-}
- 
-export default paper;
+    </div>
+  );
+};
+
+export default PaperComponent;
