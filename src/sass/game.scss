@@ -38,6 +38,16 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     .game{
         display: flex;
         flex-direction: column;
+        .rectangle2{
+            width: 200px;
+            height: 15px !important;
+            background-color:red;
+            position: absolute !important;
+            z-index: -1;
+            left: 39%;
+            transform: rotate(240deg);
+            top : 60%;
+        }
     .choices-row-one{
         display: flex;
         flex-direction: row;
@@ -90,6 +100,16 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
         justify-content: center;
         align-items: center;
         margin-top: 40px !important;
+        .rectangle3{
+            width: 200px;
+            height: 15px !important;
+            background-color:red;
+            position: absolute !important;
+            z-index: -1;
+            right: 34%;
+            transform: rotate(120deg);
+            top : 50%;
+        }
 
         .rock{
             @include element;

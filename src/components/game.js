@@ -23,7 +23,13 @@ const game = () => {
               </div>
             </div>
         </div>
+        <div className="rectangle2">
+              rect
+            </div>
         <div className="choice-row-two">
+        <div className="rectangle3">
+              rect
+            </div>
         <div className="rock-content">
               <div className="rock">
                 <img src={Rock} alt="paper" />
