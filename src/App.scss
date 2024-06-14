@@ -26,5 +26,9 @@ body {
     background: linear-gradient(90deg,  hsl(237, 49%, 23%), hsl(237, 49%, 20%));
     border: 2px solid $border;
     color:#f0f0f0;
+    &:hover{
+      background: linear-gradient(90deg,  hsl(237, 49%, 33%), hsl(237, 49%, 30%));
+      cursor: pointer;
+    }
   }
 }
