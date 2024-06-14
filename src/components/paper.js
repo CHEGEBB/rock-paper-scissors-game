@@ -1,6 +1,7 @@
 
 import React from 'react';
 import Paper from '../images/icon-paper.svg';
+import '../sass/paper.scss';
 
 const paper = () => {
     return ( 

@@ -5,13 +5,13 @@ const header = () => {
     return ( 
         <div className="header">
             <div className="intro">
-                <div className="rock">
+                <div className="rock-heading">
                     <h1>Rock</h1>
                 </div>
-                <div className="paper">
+                <div className="paper-heading">
                     <h1>Paper</h1>
                 </div>
-                <div className="scissors">
+                <div className="scissors-heading">
                     <h1>Scissors</h1>
                 </div>
             </div>
