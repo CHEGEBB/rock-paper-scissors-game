@@ -32,8 +32,7 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     justify-content: center;
     align-items: center;
 }
-
-
+@media screen and (min-width: 1200px){
 .game-container{
     .game{
         display: flex;
@@ -114,3 +113,89 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     }
 }
 }
+}
+// }
+// @media screen and (max-width: 1366px) {
+    
+// .game-container{
+//     .game{
+//         display: flex;
+//         flex-direction: column;
+//         .triangle{
+//             position: absolute;
+//             z-index: -1;
+//             margin:  0 auto !important;
+//             align-items: center;
+//             justify-content: center;
+//             left: 550px !important;
+//             top:  370px !important;
+
+//         }
+//     .choices-row-one{
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         position: relative;
+//         z-index: 2;
+//         width: 500px;
+//         gap: 80px;
+//         margin: 0 auto !important;
+//         justify-content: center;
+//         align-items: center;
+//         margin-top: -360px !important;
+//         right: 90px;
+//         .paper {
+//             @include element;
+//             border : 20px solid hsl(230, 89%, 65%) ;
+//             box-shadow: 0 12px 0  hsl(230, 89%, 60%);
+//             justify-content: center;
+//             align-items: center;
+
+          
+//             img {
+//                 margin: 40px 40px;
+//                 width: 60px !important;
+//               }
+//         }
+//         .scissors{
+//             @include element;
+//             border : 20px solid hsl(39, 89%, 53%) ;
+//             box-shadow: 0 12px 0  hsl(40, 84%, 40%);
+//             justify-content: center;
+//             align-items: center;
+//             img {
+//                 margin: 40px 40px;
+//                 width: 60px !important;
+//               }
+//         }
+//     }
+//     .choice-row-two{
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         width: 500px;
+//         gap: 50px;
+//         margin: 0 auto !important;
+//         justify-content: center;
+//         align-items: center;
+//         margin-top: 40px !important;
+//         right: 90px;
+//         position: relative;
+//         z-index: 2;
+
+//         .rock{
+//             @include element;
+//             border : 20px solid hsl(349, 71%, 52%) ;
+//             box-shadow: 0 12px 0  hsl(349, 71%, 40%);
+//             justify-content: center;
+//             align-items: center;
+//             img {
+//                 margin: 40px 40px;
+//                 width: 60px !important;
+//               }
+//         }
+//     }
+// }
+// }
+    
+// }
