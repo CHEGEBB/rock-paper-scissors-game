@@ -30,7 +30,7 @@ const handleClose= () =>{
         <div className="rules-content">
           <div className="row1">
           <div className="rule1">
-            <div className="paper">
+            <div className="paper-rule">
               <div className="hand">
                 <img src={Paper} alt="paper" />
               </div>
@@ -41,7 +41,7 @@ const handleClose= () =>{
               </div>
               </div>
               <div className="rule2">
-            <div className="scissors">
+            <div className="scissors-rule">
               <div className="scissor">
                 <img src={Scissors} alt="paper" />
               </div>
@@ -59,7 +59,7 @@ const handleClose= () =>{
               <img src={Rightarrow} alt="paper" />
             </div>
             <div className="rock-content">
-              <div className="rock">
+              <div className="rock-rule">
                 <img src={Rock} alt="paper" />
               </div>
             </div>

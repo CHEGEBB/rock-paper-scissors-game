@@ -60,30 +60,6 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
         align-items: center;
         margin-top: -360px !important;
         right: 90px;
-        // .paper {
-        //     @include element;
-        //     border : 20px solid hsl(230, 89%, 65%) ;
-        //     box-shadow: 0 12px 0  hsl(230, 89%, 60%);
-        //     justify-content: center;
-        //     align-items: center;
-
-          
-        //     img {
-        //         margin: 40px 40px;
-        //         width: 60px !important;
-        //       }
-        // }
-        .scissors{
-            @include element;
-            border : 20px solid hsl(39, 89%, 53%) ;
-            box-shadow: 0 12px 0  hsl(40, 84%, 40%);
-            justify-content: center;
-            align-items: center;
-            img {
-                margin: 40px 40px;
-                width: 60px !important;
-              }
-        }
     }
     .choice-row-two{
         display: flex;
@@ -98,18 +74,6 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
         right: 90px;
         position: relative;
         z-index: 2;
-
-        .rock{
-            @include element;
-            border : 20px solid hsl(349, 71%, 52%) ;
-            box-shadow: 0 12px 0  hsl(349, 71%, 40%);
-            justify-content: center;
-            align-items: center;
-            img {
-                margin: 40px 40px;
-                width: 60px !important;
-              }
-        }
     }
 }
 }
