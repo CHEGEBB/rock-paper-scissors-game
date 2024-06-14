@@ -38,33 +38,29 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     .game{
         display: flex;
         flex-direction: column;
-        .rectangle2{
-            width: 200px;
-            height: 15px !important;
-            background-color:red;
-            position: absolute !important;
+        .triangle{
+            position: absolute;
             z-index: -1;
-            left: 39%;
-            transform: rotate(240deg);
-            top : 60%;
+            margin:  0 auto !important;
+            align-items: center;
+            justify-content: center;
+            left: 530px !important;
+            top:  370px !important;
+
         }
     .choices-row-one{
         display: flex;
         flex-direction: row;
         align-items: center;
+        position: relative;
+        z-index: 2;
         width: 500px;
         gap: 80px;
         margin: 0 auto !important;
         justify-content: center;
         align-items: center;
-        margin-top: 40px !important;
-        .rectangle{
-            width: 200px;
-            height: 15px !important;
-            background-color:red;
-            position: absolute !important;
-            z-index: -1;
-        }
+        margin-top: -360px !important;
+        right: 90px;
         .paper {
             @include element;
             border : 20px solid hsl(230, 89%, 65%) ;
@@ -100,16 +96,9 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
         justify-content: center;
         align-items: center;
         margin-top: 40px !important;
-        .rectangle3{
-            width: 200px;
-            height: 15px !important;
-            background-color:red;
-            position: absolute !important;
-            z-index: -1;
-            right: 34%;
-            transform: rotate(120deg);
-            top : 50%;
-        }
+        right: 90px;
+        position: relative;
+        z-index: 2;
 
         .rock{
             @include element;
