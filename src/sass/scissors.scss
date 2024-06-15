@@ -12,11 +12,14 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     align-items: center;
 }
 .scissors{
+
+ 
     @include element;
     border : 20px solid hsl(39, 89%, 53%) ;
     box-shadow: 0 12px 0  hsl(40, 84%, 40%);
     justify-content: center;
     align-items: center;
+    pointer-events: auto;
     img {
         margin: 40px 40px;
         width: 60px !important;

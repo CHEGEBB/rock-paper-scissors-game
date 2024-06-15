@@ -10,8 +10,8 @@ const ScissorsComponent = () => {
     console.log("Scissors selected"); 
     setSelectedChoice('Scissors');
   };
+  
 
-  // Render only if no choice has been made or if 'Scissors' is selected
   if (selectedChoice && selectedChoice !== 'Scissors') {
     return null;
   }
