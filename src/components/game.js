@@ -4,12 +4,11 @@ import Triangle from '../images/bg-triangle.svg';
 import PaperComponent from '../components/paper';
 import ScissorsComponent from '../components/scissors';
 import RockComponent from '../components/rock';
-import { GameProvider } from '../context/GameContext';
+// import { GameProvider } from '../context/GameContext';
 
 const game = () => {
  
     return ( 
-      <GameProvider>
         <div className="game-container">
         <div className="game">
         <div className="triangle">
@@ -31,7 +30,6 @@ const game = () => {
         </div>
             </div>
         </div>
-        </GameProvider>
 
      );
 }
