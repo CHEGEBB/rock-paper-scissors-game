@@ -8,11 +8,10 @@ const RockComponent = () => {
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
 
   const handleClick = () => {
-    console.log("Rock selected");  // Add this line to debug
+    console.log("Rock selected"); 
     setSelectedChoice('Rock');
   };
 
-  // Render only if no choice has been made or if 'Rock' is selected
   if (selectedChoice && selectedChoice !== 'Rock') {
     return null;
   }

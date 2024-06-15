@@ -23,4 +23,8 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
         margin: 40px 40px;
         width: 60px !important;
       }
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+      }
 }
