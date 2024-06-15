@@ -12,7 +12,6 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     align-items: center;
 }
 .scissors{
-
  
     @include element;
     border : 20px solid hsl(39, 89%, 53%) ;
@@ -23,5 +22,9 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     img {
         margin: 40px 40px;
         width: 60px !important;
+      }
+      &:hover{
+        cursor: pointer;
+        transform: scale(1.1);
       }
 }
