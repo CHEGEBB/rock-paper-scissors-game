@@ -1,19 +1,24 @@
-// ScissorsComponent.js
 import React, { useContext } from 'react';
-import ScissorsIcon from '../images/icon-scissors.svg'; // Adjust path as necessary
+import ScissorsIcon from '../images/icon-scissors.svg';
 import '../sass/scissors.scss';
 import { GameContext } from '../context/GameContext';
 
 const ScissorsComponent = () => {
-  const { selectedChoice, setSelectedChoice } = useContext(GameContext);
+  const {selectedChoice, setSelectedChoice } = useContext(GameContext);
 
   const handleClick = () => {
+    console.log("Scissors selected"); 
     setSelectedChoice('Scissors');
   };
 
+  // Render only if no choice has been made or if 'Scissors' is selected
+  if (selectedChoice && selectedChoice !== 'Scissors') {
+    return null;
+  }
+
   return (
     <div className="scissors" onClick={handleClick}>
-      <div className={`hand ${selectedChoice === 'Scissors' ? 'selected' : 'hidden'}`}>
+      <div className="hand">
         <img src={ScissorsIcon} alt="Scissors" />
       </div>
     </div>
