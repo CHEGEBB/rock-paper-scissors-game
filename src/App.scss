@@ -15,6 +15,8 @@ body {
   .rules{
     margin-left: 13px;
     margin-top: -80px;
+    z-index: 45;
+    position: relative;
   }
 .rules-toggle-button{
   position: absolute;
