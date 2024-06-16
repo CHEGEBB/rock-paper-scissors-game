@@ -46,6 +46,13 @@ const Game = () => {
     }
   };
 
+ 
+    function getRandomInt(max){
+      return Math.floor(Math.random() * Math.floor(max));
+    }
+    const randomNumber = getRandomInt(4);
+    
+
   return (
     <div className="game-container">
       <div className="game">
