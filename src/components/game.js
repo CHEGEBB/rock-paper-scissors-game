@@ -1,60 +1,70 @@
-import React from 'react';
+import React, { useEffect, useContext, useState } from 'react';
 import '../sass/game.scss';
 import Triangle from '../images/bg-triangle.svg';
 import PaperComponent from '../components/paper';
 import ScissorsComponent from '../components/scissors';
 import RockComponent from '../components/rock';
-import { useContext } from 'react';
 import { GameContext } from '../context/GameContext';
 
-// import { GameProvider } from '../context/GameContext';
-
 const Game = () => {
-  const {hideTriangle,setHideTriangle } = useContext(GameContext);
+  const { hideTriangle, setHideTriangle } = useContext(GameContext);
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
+  const [chosenComponent, setChosenComponent] = useState(null);
 
-  if (selectedChoice && selectedChoice !== 'Rock') {
-    setHideTriangle(true);
-  }
-  else {
-    setHideTriangle(false);
-  }
-
-  if (hideTriangle) {
-    return null;
-  }
- 
-    const HideTriangleStyles ={
-      if (setHideTriangle===true) {
-        display: 'none'
-      }
+  useEffect(() => {
+    if (selectedChoice) {
+      setHideTriangle(true);
+    } else {
+      setHideTriangle(false);
     }
-  
- 
-    return ( 
-        <div className="game-container">
-        <div className="game">
-        <div className="triangle">
-          <img src={Triangle} alt="triangle"  style={HideTriangleStyles}/>
-        
-        <div className="choices-row-one">
-            <div className="paper-container">
-              <PaperComponent/>
-            </div>
-            <div className="scissors-container">
-            <ScissorsComponent />
-            </div>
-        </div>
-        <div className="choice-row-two">
-        <div className="rock-container">
-        <RockComponent />
-            </div>
-        </div>
-        </div>
-            </div>
-        </div>
+  }, [selectedChoice, setHideTriangle]);
 
-     );
-}
- 
+  const handleChoiceClick = (choice) => {
+    setSelectedChoice(choice);
+    setChosenComponent(choice);
+    setHideTriangle(true);
+  };
+
+  const hideTriangleStyles = {
+    display: hideTriangle ? 'none' : 'block',
+  };
+
+  const renderChosenComponent = () => {
+    switch (chosenComponent) {
+      case 'Paper':
+        return <PaperComponent />;
+      case 'Scissors':
+        return <ScissorsComponent />;
+      case 'Rock':
+        return <RockComponent />;
+      default:
+        return null;
+    }
+  };
+
+  return (
+    <div className="game-container">
+      <div className="game">
+        <div className="triangle" style={hideTriangleStyles}>
+          <img src={Triangle} alt="triangle" />
+          <div className="choices-row-one">
+            <div className="paper-container" onClick={() => handleChoiceClick('Paper')}>
+              <PaperComponent />
+            </div>
+            <div className="scissors-container" onClick={() => handleChoiceClick('Scissors')}>
+              <ScissorsComponent />
+            </div>
+          </div>
+          <div className="choice-row-two">
+            <div className="rock-container" onClick={() => handleChoiceClick('Rock')}>
+              <RockComponent />
+            </div>
+          </div>
+        </div>
+        {hideTriangle && <div className="chosen-component">{renderChosenComponent()}</div>}
+      </div>
+    </div>
+  );
+};
+
 export default Game;
