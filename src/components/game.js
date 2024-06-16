@@ -11,6 +11,7 @@ import { GameContext } from '../context/GameContext';
 
 const Game = () => {
   const {hideTriangle,setHideTriangle } = useContext(GameContext);
+  
  
     return ( 
         <div className="game-container">
