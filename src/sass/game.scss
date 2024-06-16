@@ -24,6 +24,7 @@ $deep-sky-blue: #00bfff;
 $powder-blue: #b0e0e6;
 $light-blue: #add8e6;
 $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+$Barlow-font: "Barlow Semi Condensed", sans-serif;
 @mixin element{
     background-color: $light-steel-blue;
     border-radius: 50%;
@@ -49,6 +50,18 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
             left: 530px ;
             top:  370px !important;
 
+        }
+        .pick-side{
+            margin:auto 400px !important;
+            margin-top: 50px !important;
+            h1{
+                letter-spacing: 2px !important;
+                font-size: 24px;
+                font-weight: 600;
+                color: #f0f0f0;
+                font-family: $Barlow-font;
+                text-transform: uppercase;
+            }
         }
     .choices-row-one{
         display: flex;
