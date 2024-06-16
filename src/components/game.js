@@ -26,6 +26,7 @@ const Game = () => {
     setSelectedChoice(choice);
     setChosenComponent(choice);
     setHideTriangle(true);
+    setPickSide(true);
   };
 
   const hideTriangleStyles = {
@@ -64,6 +65,7 @@ const Game = () => {
             </div>
           </div>
         </div>
+        {pickSide && <div className="pick-side"><h1>You Picked</h1></div>}
         {hideTriangle && <div className="chosen-component">{renderChosenComponent()}</div>}
       </div>
     </div>
