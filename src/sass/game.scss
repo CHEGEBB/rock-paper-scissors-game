@@ -36,6 +36,10 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     .game{
         display: flex;
         flex-direction: column;
+        .chosen-component{
+            margin:auto 400px !important;
+            margin-top: 50px !important;
+        }
         .triangle{
             position: fixed;
             z-index: 1;
