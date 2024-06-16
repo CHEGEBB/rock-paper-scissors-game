@@ -13,7 +13,7 @@ const Game = () => {
   const {hideTriangle,setHideTriangle } = useContext(GameContext);
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
 
-  if (selectedChoice && selectedChoice !== null && selectedChoice !== undefined) {
+  if (selectedChoice && selectedChoice !== 'Rock') {
     setHideTriangle(true);
   }
   else {
@@ -23,18 +23,19 @@ const Game = () => {
   if (hideTriangle) {
     return null;
   }
-
-  if (setHideTriangle===true) {
+ 
     const HideTriangleStyles ={
-      display: 'none'
+      if (setHideTriangle===true) {
+        display: 'none'
+      }
     }
-  }
+  
  
     return ( 
         <div className="game-container">
         <div className="game">
         <div className="triangle">
-          <img src={Triangle} alt="triangle" />
+          <img src={Triangle} alt="triangle"  style={HideTriangleStyles}/>
         
         <div className="choices-row-one">
             <div className="paper-container">

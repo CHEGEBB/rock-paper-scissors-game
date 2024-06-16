@@ -14,9 +14,7 @@ const RockComponent = () => {
     setSelectedChoice('Rock');
   };
 
-  if (selectedChoice && selectedChoice !== 'Rock') {
-    return null;
-  }
+   
 
   return (
     <div className="rock" onClick={handleClick}>
