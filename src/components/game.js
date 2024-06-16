@@ -4,30 +4,33 @@ import Triangle from '../images/bg-triangle.svg';
 import PaperComponent from '../components/paper';
 import ScissorsComponent from '../components/scissors';
 import RockComponent from '../components/rock';
-import ComputerChoice from '../components/ComputerChoice';
 import { GameContext } from '../context/GameContext';
 
 const Game = () => {
   const { hideTriangle, setHideTriangle } = useContext(GameContext);
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
   const [chosenComponent, setChosenComponent] = useState(null);
+  const { pickSide, setPickSide } = useContext(GameContext);
+  const [computerChoice, setComputerChoice] = useState(true);
 
   useEffect(() => {
     if (selectedChoice) {
       setHideTriangle(true);
-      setTimeout(() => {
-        ComputerChoice();
-
-      }, 3000);
+      setPickSide(true);
+      setComputerChoice(true);
     } else {
       setHideTriangle(false);
-      setChosenComponent(null);
+      setPickSide(false);
+      setComputerChoice(false);
     }
-  }, [selectedChoice, setHideTriangle, setSelectedChoice, ComputerChoice]);
+  }, [selectedChoice, setHideTriangle, setPickSide]);
 
   const handleChoiceClick = (choice) => {
     setSelectedChoice(choice);
     setChosenComponent(choice);
+    setHideTriangle(true);
+    setPickSide(true);
+    setComputerChoice(true);
   };
 
   const hideTriangleStyles = {
@@ -46,9 +49,18 @@ const Game = () => {
         return null;
     }
   };
-  function ComputerChoice (){
-    <ComputerChoice selectedChoice={selectedChoice} />
-  }
+
+
+
+
+  const renderComputerLogic = () => {
+    const getRandomInt = (max) => {
+      return Math.floor(Math.random() * max);
+    };
+    const getInt = getRandomInt(3);
+    console.log("The selected random int  is😂: " + getInt)
+  };
+  console.log("The selected choice is😂: " + renderChosenComponent())
   return (
     <div className="game-container">
       <div className="game">
@@ -68,7 +80,9 @@ const Game = () => {
             </div>
           </div>
         </div>
+        {pickSide && <div className="pick-side"><h1>You Picked</h1></div>}
         {hideTriangle && <div className="chosen-component">{renderChosenComponent()}</div>}
+        {computerChoice && <div className='computer-choice'>{renderComputerLogic()}</div>}
       </div>
     </div>
   );
