@@ -11,7 +11,7 @@ const Game = () => {
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
   const [chosenComponent, setChosenComponent] = useState(null);
   const { pickSide, setPickSide } = useContext(GameContext);
-  const [computerChoice, setComputerChoice] = useState(false);
+  const [computerChoice, setComputerChoice] = useState(true);
 
   useEffect(() => {
     if (selectedChoice) {
@@ -58,16 +58,7 @@ const Game = () => {
   const renderComputerLogic = () => {
     const randomNumber = getRandomInt(3);
     console.log("The selected random number is: " + randomNumber)
-    switch (randomNumber) {
-      case 0:
-        return <PaperComponent />;
-      case 1:
-        return <ScissorsComponent />;
-      case 2:
-        return <RockComponent />;
-      default:
-        return null;
-    }
+    if
   };
 
   return (
