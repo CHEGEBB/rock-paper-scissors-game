@@ -11,6 +11,7 @@ const Game = () => {
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
   const [chosenComponent, setChosenComponent] = useState(null);
   const {pickSide, setPickSide} = useContext(GameContext);
+  const {computerChoice, setComputerChoice} =useState(false)
 
   useEffect(() => {
     if (selectedChoice) {

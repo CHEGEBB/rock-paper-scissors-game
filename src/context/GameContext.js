@@ -6,9 +6,10 @@ const GameProvider = ({ children }) => {
   const [selectedChoice, setSelectedChoice] = useState(null);
   const [pickSide, setPickSide] = useState(false);
   const [hideTriangle, setHideTriangle] = useState(false);
+  const [computerChoice, setComputerChoice] =useState(false)
 
   return (
-    <GameContext.Provider value={{ selectedChoice, setSelectedChoice, pickSide, setPickSide,hideTriangle,setHideTriangle }}>
+    <GameContext.Provider value={{ selectedChoice, setSelectedChoice, pickSide, setPickSide,hideTriangle,setHideTriangle,computerChoice, setComputerChoice }}>
       {children}
     </GameContext.Provider>
   );
