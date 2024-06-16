@@ -10,14 +10,17 @@ const Game = () => {
   const { hideTriangle, setHideTriangle } = useContext(GameContext);
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
   const [chosenComponent, setChosenComponent] = useState(null);
+  const {pickSide, setPickSide} = useContext(GameContext);
 
   useEffect(() => {
     if (selectedChoice) {
       setHideTriangle(true);
+      setPickSide(true);
     } else {
       setHideTriangle(false);
+      setPickSide(false);
     }
-  }, [selectedChoice, setHideTriangle]);
+  }, [selectedChoice, setHideTriangle,setPickSide]);
 
   const handleChoiceClick = (choice) => {
     setSelectedChoice(choice);

@@ -6,7 +6,6 @@ import { GameContext } from '../context/GameContext';
 
 const RockComponent = () => {
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
-  const {pickSide, setPickSide } = useContext(GameContext);
 
 
   const handleClick = () => {
@@ -14,7 +13,9 @@ const RockComponent = () => {
     setSelectedChoice('Rock');
   };
 
-   
+  if (selectedChoice && selectedChoice !== 'Rock') {
+    return null;
+  }
 
   return (
     <div className="rock" onClick={handleClick}>
