@@ -11,7 +11,24 @@ import { GameContext } from '../context/GameContext';
 
 const Game = () => {
   const {hideTriangle,setHideTriangle } = useContext(GameContext);
-  
+  const { selectedChoice, setSelectedChoice } = useContext(GameContext);
+
+  if (selectedChoice && selectedChoice !== null && selectedChoice !== undefined) {
+    setHideTriangle(true);
+  }
+  else {
+    setHideTriangle(false);
+  }
+
+  if (hideTriangle) {
+    return null;
+  }
+
+  if (setHideTriangle===true) {
+    const HideTriangleStyles ={
+      display: 'none'
+    }
+  }
  
     return ( 
         <div className="game-container">
