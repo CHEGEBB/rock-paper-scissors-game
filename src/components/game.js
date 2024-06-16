@@ -53,9 +53,11 @@ const Game = () => {
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * max);
   };
-  const randomNumber = getRandomInt(3);
-console.log(randomNumber)
+
+
   const renderComputerLogic = () => {
+    const randomNumber = getRandomInt(3);
+    console.log("The selected random number is: " + randomNumber)
     switch (randomNumber) {
       case 0:
         return <PaperComponent />;
