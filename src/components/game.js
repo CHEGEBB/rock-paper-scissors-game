@@ -50,17 +50,17 @@ const Game = () => {
     }
   };
 
-  const getRandomInt = (max) => {
-    return Math.floor(Math.random() * max);
-  };
+
 
 
   const renderComputerLogic = () => {
-    const randomNumber = getRandomInt(3);
-    console.log("The selected random number is: " + randomNumber)
-    if
+    const getRandomInt = (max) => {
+      return Math.floor(Math.random() * max);
+    };
+    const getInt = getRandomInt(3);
+    console.log("The selected random int  is😂: " + getInt)
   };
-
+  console.log("The selected choice is😂: " + renderChosenComponent())
   return (
     <div className="game-container">
       <div className="game">
