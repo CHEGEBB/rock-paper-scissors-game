@@ -4,9 +4,13 @@ import Triangle from '../images/bg-triangle.svg';
 import PaperComponent from '../components/paper';
 import ScissorsComponent from '../components/scissors';
 import RockComponent from '../components/rock';
+import { useContext } from 'react';
+import { GameContext } from '../context/GameContext';
+
 // import { GameProvider } from '../context/GameContext';
 
-const game = () => {
+const Game = () => {
+  const {hideTriangle,setHideTriangle } = useContext(GameContext);
  
     return ( 
         <div className="game-container">
@@ -34,4 +38,4 @@ const game = () => {
      );
 }
  
-export default game;
+export default Game;

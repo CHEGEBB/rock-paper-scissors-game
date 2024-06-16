@@ -6,6 +6,8 @@ import { GameContext } from '../context/GameContext';
 
 const RockComponent = () => {
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
+  const {pickSide, setPickSide } = useContext(GameContext);
+
 
   const handleClick = () => {
     console.log("Rock selected"); 
