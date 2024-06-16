@@ -4,7 +4,7 @@ import Triangle from '../images/bg-triangle.svg';
 import PaperComponent from '../components/paper';
 import ScissorsComponent from '../components/scissors';
 import RockComponent from '../components/rock';
-import ComputerChoice from '../components/ComputerChoice'; // Import ComputerChoice component
+import ComputerChoice from '../components/ComputerChoice';
 import { GameContext } from '../context/GameContext';
 
 const Game = () => {
@@ -16,14 +16,14 @@ const Game = () => {
     if (selectedChoice) {
       setHideTriangle(true);
       setTimeout(() => {
-        // Simulate computer choice after 3 seconds
-        setSelectedChoice('Rock'); // Replace with actual logic to set computer choice
+        ComputerChoice();
+
       }, 3000);
     } else {
       setHideTriangle(false);
       setChosenComponent(null);
     }
-  }, [selectedChoice, setHideTriangle]);
+  }, [selectedChoice, setHideTriangle, setSelectedChoice, ComputerChoice]);
 
   const handleChoiceClick = (choice) => {
     setSelectedChoice(choice);
@@ -46,7 +46,9 @@ const Game = () => {
         return null;
     }
   };
-
+  function ComputerChoice (){
+    <ComputerChoice selectedChoice={selectedChoice} />
+  }
   return (
     <div className="game-container">
       <div className="game">
@@ -67,7 +69,6 @@ const Game = () => {
           </div>
         </div>
         {hideTriangle && <div className="chosen-component">{renderChosenComponent()}</div>}
-        <ComputerChoice selectedChoice={selectedChoice} /> {/* Render ComputerChoice component */}
       </div>
     </div>
   );
