@@ -10,24 +10,27 @@ const Game = () => {
   const { hideTriangle, setHideTriangle } = useContext(GameContext);
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
   const [chosenComponent, setChosenComponent] = useState(null);
-  const {pickSide, setPickSide} = useContext(GameContext);
-  const {computerChoice, setComputerChoice} =useState(false)
+  const { pickSide, setPickSide } = useContext(GameContext);
+  const [computerChoice, setComputerChoice] = useState(false);
 
   useEffect(() => {
     if (selectedChoice) {
       setHideTriangle(true);
       setPickSide(true);
+      setComputerChoice(true);
     } else {
       setHideTriangle(false);
       setPickSide(false);
+      setComputerChoice(false);
     }
-  }, [selectedChoice, setHideTriangle,setPickSide]);
+  }, [selectedChoice, setHideTriangle, setPickSide]);
 
   const handleChoiceClick = (choice) => {
     setSelectedChoice(choice);
     setChosenComponent(choice);
     setHideTriangle(true);
     setPickSide(true);
+    setComputerChoice(true);
   };
 
   const hideTriangleStyles = {
@@ -47,12 +50,23 @@ const Game = () => {
     }
   };
 
- 
-    function getRandomInt(max){
-      return Math.floor(Math.random() * Math.floor(max));
+  const getRandomInt = (max) => {
+    return Math.floor(Math.random() * max);
+  };
+  const randomNumber = getRandomInt(3);
+console.log(randomNumber)
+  const renderComputerLogic = () => {
+    switch (randomNumber) {
+      case 0:
+        return <PaperComponent />;
+      case 1:
+        return <ScissorsComponent />;
+      case 2:
+        return <RockComponent />;
+      default:
+        return null;
     }
-    const randomNumber = getRandomInt(4);
-    
+  };
 
   return (
     <div className="game-container">
@@ -75,6 +89,7 @@ const Game = () => {
         </div>
         {pickSide && <div className="pick-side"><h1>You Picked</h1></div>}
         {hideTriangle && <div className="chosen-component">{renderChosenComponent()}</div>}
+        {computerChoice && <div className='computer-choice'>{renderComputerLogic()}</div>}
       </div>
     </div>
   );
