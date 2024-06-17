@@ -76,13 +76,19 @@ const ComputerChoice = () => {
         return null;
     }
   };
+  const resetGame = ()=>{
+    setResultMessage(null);
+    setSelectedChoice(null);
+    setComputerChoice(null);
+    setComputerSide(false);
+  }
 
   return (
     <div className="computer-choice">
       <div className="results">
       <div className="result">
         {resultMessage && <h1>{resultMessage}</h1>}
-        <button>
+        <button onClick={resetGame}>
         Play Again
       </button>
       </div>
