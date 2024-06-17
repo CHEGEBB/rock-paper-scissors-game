@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PaperComputer from '../components/PaperComputer';
-import ScissorsComponent from '../components/scissors';
+import ScissorsComputer from '../components/ScissorsComputer';
 import RockComputer from '../components/RockComputer';
 
 const ComputerChoice = () => {
@@ -23,7 +23,7 @@ const ComputerChoice = () => {
       case 0:
         return <PaperComputer />;
       case 1:
-        return <ScissorsComponent />;
+        return <ScissorsComputer />;
       case 2:
         return <RockComputer />;
       default:
