@@ -7,7 +7,7 @@ import { GameContext } from '../context/GameContext';
 const ComputerChoice = () => {
   const [computerChoice, setComputerChoice] = useState(null);
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
-  const { computerSide, setComputerSide } = useState(GameContext);
+  const [computerSide, setComputerSide ]= useState(false);
 
 
   useEffect(()=>{
@@ -46,7 +46,7 @@ const ComputerChoice = () => {
     <div className="computer-choice">
       {computerChoice !== null && renderComputerComponent()}
       <h1>I'm here</h1>
-      {computerChoice && <div className='computer-side'>The house picked</div>}
+      {computerSide && <div className='computer-side'>The house picked</div>}
     </div>
   );
 };
