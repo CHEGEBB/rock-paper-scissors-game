@@ -149,3 +149,15 @@ $Barlow-font: "Barlow Semi Condensed", sans-serif;
     }
   }
 }
+@media screen and (max-width: 768px) {
+    
+   .game-container {
+     .game {
+        display: flex;
+        flex-direction: column;
+       .chosen-component {
+         margin: auto 200px !important;
+         margin-top: 50px !important;
+       }
+    
+}
