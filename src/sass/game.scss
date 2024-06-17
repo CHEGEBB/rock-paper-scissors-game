@@ -38,7 +38,7 @@ $Barlow-font: "Barlow Semi Condensed", sans-serif;
     margin-top: -145px !important;
     display: flex;
     flex-direction: row;
-    gap: 50px;
+    gap: 30px;
     .the-house{
         display: flex;
         flex-direction: column;
@@ -46,11 +46,23 @@ $Barlow-font: "Barlow Semi Condensed", sans-serif;
       
     }
     .results{
+        button{
+            display: block;
+        }
         .result{
-            background-color: #f0f0f0;
             align-items: center;
             justify-content: center;
             margin-left: -100px;
+            margin-top: 150px;
+            width: 150px;
+            h1{
+                letter-spacing: 2px !important;
+                font-size: 34px;
+                font-weight: 700;
+                color: #f0f0f0;
+                font-family: $Barlow-font;
+                text-transform: uppercase;
+            }
         }
     }
  
