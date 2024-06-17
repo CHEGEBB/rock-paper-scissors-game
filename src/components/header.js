@@ -1,7 +1,10 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import '../sass/header.scss';
+import { GameContext } from '../context/GameContext';
 
-const header = () => {
+const Header = () => {
+    const { wins, losses } = useContext(GameContext);
+
     return ( 
         <div className="header">
             <div className="intro">
@@ -17,10 +20,11 @@ const header = () => {
             </div>
             <div className="score">
                 <p>Score</p>
-                <h1>12</h1>
+                <h1>{wins}</h1> {/* Display wins */}
+                <h1>{losses}</h1> {/* Display losses */}
             </div>
         </div>
      );
 }
  
-export default header;
+export default Header;

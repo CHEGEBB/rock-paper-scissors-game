@@ -40,27 +40,27 @@ const ComputerChoice = () => {
 
   const handleResult = () => {
     if (!selectedChoice || computerChoice === null) {
-      return; // Exit early if choices are not set
+      return;
     }
 
     if (selectedChoice === 'Paper' && computerChoice === 0) {
-      setResultMessage('Tie');
+      setResultMessage("It's a Tie");
     } else if (selectedChoice === 'Paper' && computerChoice === 1) {
-      setResultMessage('You win');
+      setResultMessage('You Lose');
     } else if (selectedChoice === 'Paper' && computerChoice === 2) {
-      setResultMessage('You lose');
+      setResultMessage('You Win');
     } else if (selectedChoice === 'Scissors' && computerChoice === 0) {
-      setResultMessage('You lose');
+      setResultMessage('You win');
     } else if (selectedChoice === 'Scissors' && computerChoice === 1) {
-      setResultMessage('Tie');
+      setResultMessage("It's a Tie");
     } else if (selectedChoice === 'Scissors' && computerChoice === 2) {
-      setResultMessage('You win');
+      setResultMessage('You Lose');
     } else if (selectedChoice === 'Rock' && computerChoice === 0) {
-      setResultMessage('You win');
+      setResultMessage('You Lose');
     } else if (selectedChoice === 'Rock' && computerChoice === 1) {
-      setResultMessage('You lose');
+      setResultMessage('You win');
     } else if (selectedChoice === 'Rock' && computerChoice === 2) {
-      setResultMessage('Tie');
+      setResultMessage("It's a Tie");
     }
   };
 
