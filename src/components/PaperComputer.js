@@ -22,10 +22,12 @@ const PaperComputer = () => {
   }
 
   return (
+    <div className="paper-computer">
     <div className="paper" onClick={handleClick}>
       <div className="hand">
         <img src={PaperIcon} alt="Paper" />
       </div>
+    </div>
     </div>
   );
 };
