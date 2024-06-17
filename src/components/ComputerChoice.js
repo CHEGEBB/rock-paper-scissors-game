@@ -10,6 +10,7 @@ const ComputerChoice = () => {
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
   const [computerSide, setComputerSide] = useState(false);
   const [resultMessage, setResultMessage] = useState(null);
+  const { updateScore } = useContext(GameContext);
 
   useEffect(() => {
     if (selectedChoice) {
@@ -26,17 +27,12 @@ const ComputerChoice = () => {
     }
   }, [computerChoice]);
 
-  useEffect(() => {
-    handleResult();
-  }, [selectedChoice, computerChoice]);
+ 
 
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * max);
   };
-
-  const handleChoiceClick = (choice) => {
-    setSelectedChoice(choice);
-  };
+ 
 
   const handleResult = () => {
     if (!selectedChoice || computerChoice === null) {
@@ -47,22 +43,31 @@ const ComputerChoice = () => {
       setResultMessage("It's a Tie");
     } else if (selectedChoice === 'Paper' && computerChoice === 1) {
       setResultMessage('You Lose');
+      updateScore('lose');
     } else if (selectedChoice === 'Paper' && computerChoice === 2) {
       setResultMessage('You Win');
+      updateScore('win');
     } else if (selectedChoice === 'Scissors' && computerChoice === 0) {
       setResultMessage('You win');
+      updateScore('win');
     } else if (selectedChoice === 'Scissors' && computerChoice === 1) {
       setResultMessage("It's a Tie");
     } else if (selectedChoice === 'Scissors' && computerChoice === 2) {
       setResultMessage('You Lose');
+      updateScore('lose');
     } else if (selectedChoice === 'Rock' && computerChoice === 0) {
       setResultMessage('You Lose');
+      updateScore('lose');
     } else if (selectedChoice === 'Rock' && computerChoice === 1) {
       setResultMessage('You win');
+      updateScore('win');
     } else if (selectedChoice === 'Rock' && computerChoice === 2) {
       setResultMessage("It's a Tie");
     }
   };
+  useEffect(() => {
+    handleResult();
+  }, [selectedChoice, computerChoice,]);
 
   const renderComputerComponent = () => {
     switch (computerChoice) {

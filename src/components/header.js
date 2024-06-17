@@ -3,7 +3,12 @@ import '../sass/header.scss';
 import { GameContext } from '../context/GameContext';
 
 const Header = () => {
-    const { wins, losses } = useContext(GameContext);
+    const { wins} = useContext(GameContext);
+    const {losses} = useContext(GameContext);
+
+    const score =()=>{
+        return wins - losses;
+    }
 
     return ( 
         <div className="header">
@@ -20,8 +25,7 @@ const Header = () => {
             </div>
             <div className="score">
                 <p>Score</p>
-                <h1>{wins}</h1> {/* Display wins */}
-                <h1>{losses}</h1> {/* Display losses */}
+                <h1>{score}</h1>
             </div>
         </div>
      );
