@@ -71,3 +71,39 @@ $Barlow-font: "Barlow Semi Condensed", sans-serif;
         }
     }
 }
+
+@media screen  and (max-width: 768px) {
+
+       .header{
+        width: 350px !important;
+        height: 100px !important;
+        border: 3px solid  hsl(217, 16%, 45%) !important;
+        margin: 0 auto!important;
+        padding: 20px!important;
+        margin-top: 80px !important;
+        border-radius: 12px !important;
+        display: flex;
+        flex-direction: row;
+        gap: 370px !important;
+        font-family: $Barlow-font;
+        color: #fff;
+        .intro{
+            display: flex !important;
+            flex-direction: column !important;
+            height: 100px !important;
+            font-family: $Barlow-font;
+            color: #fff;
+            gap: 2px !important;
+            margin-top: -35px;
+            .rock-heading{
+              
+            }
+            .paper-heading{
+               
+            }
+            .scissors-heading{
+               
+            }
+        }
+    }
+}
