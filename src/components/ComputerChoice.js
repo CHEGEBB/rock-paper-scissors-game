@@ -82,14 +82,14 @@ const ComputerChoice = () => {
       <div className="results">
       <div className="result">
         {resultMessage && <h1>{resultMessage}</h1>}
+        <button>
+        Play Again
+      </button>
       </div>
       </div>
     <div className="the-house">
       {computerSide && <div className='computer-side'>
       <h1>The house picked</h1>
-      <button>
-        Play Again
-      </button>
       </div>}
       {computerChoice !== null && renderComputerComponent()}
       </div>
