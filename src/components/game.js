@@ -11,17 +11,14 @@ const Game = () => {
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
   const [chosenComponent, setChosenComponent] = useState(null);
   const { pickSide, setPickSide } = useContext(GameContext);
-  const [computerChoice, setComputerChoice] = useState(true);
 
   useEffect(() => {
     if (selectedChoice) {
       setHideTriangle(true);
       setPickSide(true);
-      setComputerChoice(true);
     } else {
       setHideTriangle(false);
       setPickSide(false);
-      setComputerChoice(false);
     }
   }, [selectedChoice, setHideTriangle, setPickSide]);
 
@@ -30,7 +27,6 @@ const Game = () => {
     setChosenComponent(choice);
     setHideTriangle(true);
     setPickSide(true);
-    setComputerChoice(true);
   };
 
   const hideTriangleStyles = {
@@ -49,18 +45,6 @@ const Game = () => {
         return null;
     }
   };
-
-
-
-
-  const renderComputerLogic = () => {
-    const getRandomInt = (max) => {
-      return Math.floor(Math.random() * max);
-    };
-    const getInt = getRandomInt(3);
-    console.log("The selected random int  is😂: " + getInt)
-  };
-  console.log("The selected choice is😂: " + renderChosenComponent())
   return (
     <div className="game-container">
       <div className="game">
@@ -82,7 +66,6 @@ const Game = () => {
         </div>
         {pickSide && <div className="pick-side"><h1>You Picked</h1></div>}
         {hideTriangle && <div className="chosen-component">{renderChosenComponent()}</div>}
-        {computerChoice && <div className='computer-choice'>{renderComputerLogic()}</div>}
       </div>
     </div>
   );

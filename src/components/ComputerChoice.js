@@ -11,6 +11,7 @@ const ComputerChoice = ({ selectedChoice }) => {
       setTimeout(() => {
         const randomInt = getRandomInt(3);
         setComputerChoice(randomInt);
+        console.log('his is'+randomInt);
       }, 3000);
     }
   }, [selectedChoice]);
