@@ -1,4 +1,3 @@
-// components/PaperComponent.js
 import React, { useContext } from 'react';
 import PaperIcon from '../images/icon-paper.svg';
 import '../sass/paper.scss';
@@ -8,13 +7,18 @@ const PaperComputer = () => {
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
 
   const handleClick = () => {
-    console.log("PaperComputer selected");  // Add this line to debug
+    console.log("PaperComputer selected");
     setSelectedChoice('PaperComputer');
   };
 
-  // Render only if no choice has been made or if 'Paper' is selected
-  if (selectedChoice && selectedChoice === 'PaperComputer') {
-    return PaperComputer.render();
+  if (selectedChoice === 'PaperComputer') {
+    return (
+      <div className="paper">
+        <div className="hand">
+          <img src={PaperIcon} alt="Paper" />
+        </div>
+      </div>
+    );
   }
 
   return (
