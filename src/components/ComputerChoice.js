@@ -11,6 +11,7 @@ const ComputerChoice = () => {
   const [computerSide, setComputerSide] = useState(false);
   const [resultMessage, setResultMessage] = useState(null);
   const { updateScore } = useContext(GameContext);
+  const [rippleWinner, setRippleWinner] = useState(null);
 
   useEffect(() => {
     if (selectedChoice) {
@@ -27,12 +28,9 @@ const ComputerChoice = () => {
     }
   }, [computerChoice]);
 
- 
-
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * max);
   };
- 
 
   const handleResult = () => {
     if (!selectedChoice || computerChoice === null) {
@@ -41,33 +39,43 @@ const ComputerChoice = () => {
 
     if (selectedChoice === 'Paper' && computerChoice === 0) {
       setResultMessage("It's a Tie");
+      setRippleWinner('tie');
     } else if (selectedChoice === 'Paper' && computerChoice === 1) {
       setResultMessage('You Lose');
       updateScore('lose');
+      setRippleWinner('computer');
     } else if (selectedChoice === 'Paper' && computerChoice === 2) {
       setResultMessage('You Win');
       updateScore('win');
+      setRippleWinner('player');
     } else if (selectedChoice === 'Scissors' && computerChoice === 0) {
       setResultMessage('You win');
       updateScore('win');
+      setRippleWinner('player');
     } else if (selectedChoice === 'Scissors' && computerChoice === 1) {
       setResultMessage("It's a Tie");
+      setRippleWinner('tie');
     } else if (selectedChoice === 'Scissors' && computerChoice === 2) {
       setResultMessage('You Lose');
       updateScore('lose');
+      setRippleWinner('computer');
     } else if (selectedChoice === 'Rock' && computerChoice === 0) {
       setResultMessage('You Lose');
       updateScore('lose');
+      setRippleWinner('computer');
     } else if (selectedChoice === 'Rock' && computerChoice === 1) {
       setResultMessage('You win');
       updateScore('win');
+      setRippleWinner('player');
     } else if (selectedChoice === 'Rock' && computerChoice === 2) {
       setResultMessage("It's a Tie");
+      setRippleWinner('tie');
     }
   };
+
   useEffect(() => {
     handleResult();
-  }, [selectedChoice, computerChoice,]);
+  }, [selectedChoice, computerChoice]);
 
   const renderComputerComponent = () => {
     switch (computerChoice) {
@@ -81,31 +89,38 @@ const ComputerChoice = () => {
         return null;
     }
   };
-  const resetGame = ()=>{
+
+  const resetGame = () => {
     setResultMessage(null);
     setSelectedChoice(null);
     setComputerChoice(null);
     setComputerSide(false);
-  }
+    setRippleWinner(null); 
+  };
 
   return (
     <div className="computer-choice">
       <div className="results">
-      <div className="result">
-        {resultMessage && <h1>{resultMessage}</h1>}
-        <button onClick={resetGame}>
-        Play Again
-      </button>
+        <div className="result">
+          {resultMessage && <h1>{resultMessage}</h1>}
+          <button onClick={resetGame}>Play Again</button>
+        </div>
       </div>
+      <div className="the-house">
+        {computerSide && (
+          <div className='computer-side'>
+            <h1>The house picked</h1>
+            {rippleWinner && rippleWinner !== 'tie' && (
+              <div className="ripple">
+                <div className="circle"></div>
+                <div className="circle"></div>
+                <div className="circle"></div>
+              </div>
+            )}
+          </div>
+        )}
+        {computerChoice !== null && renderComputerComponent()}
       </div>
-    <div className="the-house">
-      {computerSide && <div className='computer-side'>
-      <h1>The house picked</h1>
-      </div>}
-      {computerChoice !== null && renderComputerComponent()}
-      </div>
-    
-      
     </div>
   );
 };
