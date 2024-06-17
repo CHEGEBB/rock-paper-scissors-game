@@ -4,11 +4,6 @@ import { GameContext } from '../context/GameContext';
 
 const Header = () => {
     const { wins} = useContext(GameContext);
-    const {losses} = useContext(GameContext);
-
-    const score =()=>{
-        return wins - losses;
-    }
 
     return ( 
         <div className="header">
@@ -25,7 +20,7 @@ const Header = () => {
             </div>
             <div className="score">
                 <p>Score</p>
-                <h1>{score}</h1>
+                <h1>{wins}</h1>
             </div>
         </div>
      );
