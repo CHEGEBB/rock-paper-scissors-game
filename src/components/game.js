@@ -5,6 +5,7 @@ import PaperComponent from '../components/paper';
 import ScissorsComponent from '../components/scissors';
 import RockComponent from '../components/rock';
 import { GameContext } from '../context/GameContext';
+import Computer from '../components/ComputerChoice';
 
 const Game = () => {
   const { hideTriangle, setHideTriangle } = useContext(GameContext);
@@ -45,6 +46,7 @@ const Game = () => {
         return null;
     }
   };
+
   return (
     <div className="game-container">
       <div className="game">
@@ -66,6 +68,11 @@ const Game = () => {
         </div>
         {pickSide && <div className="pick-side"><h1>You Picked</h1></div>}
         {hideTriangle && <div className="chosen-component">{renderChosenComponent()}</div>}
+        {selectedChoice && (
+          <div className="computer-choice">
+            <Computer />
+          </div>
+        )}
       </div>
     </div>
   );

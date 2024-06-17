@@ -6,19 +6,17 @@ import RockComponent from '../components/rock';
 const ComputerChoice = ({ selectedChoice }) => {
   const [computerChoice, setComputerChoice] = useState(null);
 
-  useEffect(() => {
-    if (selectedChoice) {
-      setTimeout(() => {
-        const randomInt = getRandomInt(3);
-        setComputerChoice(randomInt);
-        console.log('his is'+randomInt);
-      }, 3000);
-    }
-  }, [selectedChoice]);
-
   const getRandomInt = (max) => {
     return Math.floor(Math.random() * max);
   };
+
+  useEffect(() => {
+    if (selectedChoice) {
+      const randomNumber = getRandomInt(3);
+      setComputerChoice(randomNumber);
+      console.log("The selected random int is: " + randomNumber);
+    }
+  }, [selectedChoice]);
 
   const renderComputerComponent = () => {
     switch (computerChoice) {
@@ -36,6 +34,7 @@ const ComputerChoice = ({ selectedChoice }) => {
   return (
     <div className="computer-choice">
       {computerChoice !== null && renderComputerComponent()}
+      <h1>Im here</h1>
     </div>
   );
 };
