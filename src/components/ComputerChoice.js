@@ -3,13 +3,14 @@ import PaperComputer from '../components/PaperComputer';
 import ScissorsComputer from '../components/ScissorsComputer';
 import RockComputer from '../components/RockComputer';
 import { GameContext } from '../context/GameContext';
+import '../sass/game.scss';
 
 const ComputerChoice = () => {
   const [computerChoice, setComputerChoice] = useState(null);
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
   const [computerSide, setComputerSide ]= useState(false);
 
-
+  
   useEffect(()=>{
     if(selectedChoice){
       setComputerSide(true);
@@ -42,11 +43,16 @@ const ComputerChoice = () => {
     }
   };
 
+  const handleChoiceClick = (choice) => {
+    setSelectedChoice(choice);
+  };
+
+
   return (
     <div className="computer-choice">
+       {computerSide && <div className='computer-side'><h1>The house picked</h1></div>}
       {computerChoice !== null && renderComputerComponent()}
-      <h1>I'm here</h1>
-      {computerSide && <div className='computer-side'>The house picked</div>}
+      <button onClick={handleChoiceClick}>me</button>
     </div>
   );
 };

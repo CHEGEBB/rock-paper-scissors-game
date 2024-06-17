@@ -25,72 +25,89 @@ $powder-blue: #b0e0e6;
 $light-blue: #add8e6;
 $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
 $Barlow-font: "Barlow Semi Condensed", sans-serif;
-@mixin element{
-    background-color: $light-steel-blue;
-    border-radius: 50%;
-    width: 140px;
-    height: 140px;
-    justify-content: center;
-    align-items: center;
+@mixin element {
+  background-color: $light-steel-blue;
+  border-radius: 50%;
+  width: 140px;
+  height: 140px;
+  justify-content: center;
+  align-items: center;
 }
-.game-container{
-    .game{
-        display: flex;
-        flex-direction: column;
-        .chosen-component{
-            margin:auto 400px !important;
-            margin-top: 50px !important;
-        }
-        .triangle{
-            position: fixed;
-            z-index: 1;
-            margin:  0 auto !important;
-            align-items: center;
-            justify-content: center;
-            left: 530px ;
-            top:  370px !important;
+.computer-choice {
+  display: flex;
+  flex-direction: column;
+  margin: auto 400px !important;
 
-        }
-        .pick-side{
-            margin:auto 400px !important;
-            margin-top: 50px !important;
-            h1{
-                letter-spacing: 2px !important;
-                font-size: 24px;
-                font-weight: 600;
-                color: #f0f0f0;
-                font-family: $Barlow-font;
-                text-transform: uppercase;
-            }
-        }
-    .choices-row-one{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        position: relative;
-        z-index: 2;
-        width: 500px;
-        gap: 80px;
-        margin: 0 auto !important;
-        justify-content: center;
-        align-items: center;
-        margin-top: -360px !important;
-        right: 90px;
+  button {
+    display: none;
+  }
+  .computer-side {
+    h1 {
+      letter-spacing: 2px !important;
+      font-size: 24px;
+      font-weight: 600;
+      color: #f0f0f0;
+      font-family: $Barlow-font;
+      text-transform: uppercase;
     }
-    .choice-row-two{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        width: 500px;
-        gap: 50px;
-        margin: 0 auto !important;
-        justify-content: center;
-        align-items: center;
-        margin-top: 40px !important;
-        right: 90px;
-        position: relative;
-        z-index: 2;
-    }
+  }
 }
-
+.game-container {
+  .game {
+    display: flex;
+    flex-direction: column;
+    .chosen-component {
+      margin: auto 400px !important;
+      margin-top: 50px !important;
+    }
+    .triangle {
+      position: fixed;
+      z-index: 1;
+      margin: 0 auto !important;
+      align-items: center;
+      justify-content: center;
+      left: 530px;
+      top: 370px !important;
+    }
+    .pick-side {
+      margin: auto 400px !important;
+      margin-top: 50px !important;
+      h1 {
+        letter-spacing: 2px !important;
+        font-size: 24px;
+        font-weight: 600;
+        color: #f0f0f0;
+        font-family: $Barlow-font;
+        text-transform: uppercase;
+      }
+    }
+    .choices-row-one {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+      width: 500px;
+      gap: 80px;
+      margin: 0 auto !important;
+      justify-content: center;
+      align-items: center;
+      margin-top: -360px !important;
+      right: 90px;
+    }
+    .choice-row-two {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 500px;
+      gap: 50px;
+      margin: 0 auto !important;
+      justify-content: center;
+      align-items: center;
+      margin-top: 40px !important;
+      right: 90px;
+      position: relative;
+      z-index: 2;
+    }
+  }
 }
