@@ -11,11 +11,6 @@ $gradient1: linear-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
     justify-content: center;
     align-items: center;
 }
-.paper-computer{
-  margin:auto 800px !important;
-  margin-top: -170px !important;
-  top : 20%;
-}
 .paper {
     @include element;
     border : 20px solid hsl(230, 89%, 65%) ;

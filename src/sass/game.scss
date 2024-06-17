@@ -37,6 +37,8 @@ $Barlow-font: "Barlow Semi Condensed", sans-serif;
   display: flex;
   flex-direction: column;
   margin: auto 400px !important;
+  margin-top: -145px !important;
+  gap: 50px;
 
   button {
     display: none;
@@ -46,6 +48,7 @@ $Barlow-font: "Barlow Semi Condensed", sans-serif;
       letter-spacing: 2px !important;
       font-size: 24px;
       font-weight: 600;
+      width: 400px;
       color: #f0f0f0;
       font-family: $Barlow-font;
       text-transform: uppercase;
