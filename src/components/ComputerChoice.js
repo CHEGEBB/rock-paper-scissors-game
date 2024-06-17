@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import PaperComponent from '../components/paper';
+import PaperComputer from '../components/PaperComputer';
 import ScissorsComponent from '../components/scissors';
-import RockComponent from '../components/rock';
+import RockComputer from '../components/RockComputer';
 
-const ComputerChoice = ({ selectedChoice }) => {
+const ComputerChoice = () => {
   const [computerChoice, setComputerChoice] = useState(null);
 
   const getRandomInt = (max) => {
@@ -11,21 +11,21 @@ const ComputerChoice = ({ selectedChoice }) => {
   };
 
   useEffect(() => {
-    if (selectedChoice) {
+    if (computerChoice === null) {
       const randomNumber = getRandomInt(3);
       setComputerChoice(randomNumber);
-      console.log("The selected random int is: " + randomNumber);
+      console.log("The selected random int is: " + randomNumber);  // Log the random number
     }
-  }, [selectedChoice]);
+  }, [computerChoice]);
 
   const renderComputerComponent = () => {
     switch (computerChoice) {
       case 0:
-        return <PaperComponent />;
+        return <PaperComputer />;
       case 1:
         return <ScissorsComponent />;
       case 2:
-        return <RockComponent />;
+        return <RockComputer />;
       default:
         return null;
     }
@@ -34,7 +34,7 @@ const ComputerChoice = ({ selectedChoice }) => {
   return (
     <div className="computer-choice">
       {computerChoice !== null && renderComputerComponent()}
-      <h1>Im here</h1>
+      <h1>I'm here</h1>
     </div>
   );
 };
