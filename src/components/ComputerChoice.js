@@ -1,4 +1,4 @@
-import React, { useEffect, useState ,useContext} from 'react';
+import React, { useEffect, useState, useContext } from 'react';
 import PaperComputer from '../components/PaperComputer';
 import ScissorsComputer from '../components/ScissorsComputer';
 import RockComputer from '../components/RockComputer';
@@ -8,20 +8,16 @@ import '../sass/game.scss';
 const ComputerChoice = () => {
   const [computerChoice, setComputerChoice] = useState(null);
   const { selectedChoice, setSelectedChoice } = useContext(GameContext);
-  const [computerSide, setComputerSide ]= useState(false);
+  const [computerSide, setComputerSide] = useState(false);
+  const [resultMessage, setResultMessage] = useState(null);
 
-  
-  useEffect(()=>{
-    if(selectedChoice){
+  useEffect(() => {
+    if (selectedChoice) {
       setComputerSide(true);
-    }
-    else{
+    } else {
       setComputerSide(false);
     }
-  },[selectedChoice,setComputerSide]);
-  const getRandomInt = (max) => {
-    return Math.floor(Math.random() * max);
-  };
+  }, [selectedChoice]);
 
   useEffect(() => {
     if (computerChoice === null) {
@@ -29,6 +25,44 @@ const ComputerChoice = () => {
       setComputerChoice(randomNumber);
     }
   }, [computerChoice]);
+
+  useEffect(() => {
+    handleResult();
+  }, [selectedChoice, computerChoice]);
+
+  const getRandomInt = (max) => {
+    return Math.floor(Math.random() * max);
+  };
+
+  const handleChoiceClick = (choice) => {
+    setSelectedChoice(choice);
+  };
+
+  const handleResult = () => {
+    if (!selectedChoice || computerChoice === null) {
+      return; // Exit early if choices are not set
+    }
+
+    if (selectedChoice === 'Paper' && computerChoice === 0) {
+      setResultMessage('Tie');
+    } else if (selectedChoice === 'Paper' && computerChoice === 1) {
+      setResultMessage('You win');
+    } else if (selectedChoice === 'Paper' && computerChoice === 2) {
+      setResultMessage('You lose');
+    } else if (selectedChoice === 'Scissors' && computerChoice === 0) {
+      setResultMessage('You lose');
+    } else if (selectedChoice === 'Scissors' && computerChoice === 1) {
+      setResultMessage('Tie');
+    } else if (selectedChoice === 'Scissors' && computerChoice === 2) {
+      setResultMessage('You win');
+    } else if (selectedChoice === 'Rock' && computerChoice === 0) {
+      setResultMessage('You win');
+    } else if (selectedChoice === 'Rock' && computerChoice === 1) {
+      setResultMessage('You lose');
+    } else if (selectedChoice === 'Rock' && computerChoice === 2) {
+      setResultMessage('Tie');
+    }
+  };
 
   const renderComputerComponent = () => {
     switch (computerChoice) {
@@ -43,16 +77,19 @@ const ComputerChoice = () => {
     }
   };
 
-  const handleChoiceClick = (choice) => {
-    setSelectedChoice(choice);
-  };
-
-
   return (
     <div className="computer-choice">
-       {computerSide && <div className='computer-side'><h1>The house picked</h1></div>}
+      <div className="results">
+      <div className="result">
+        {resultMessage && <h1>{resultMessage}</h1>}
+      </div>
+      </div>
+    <div className="the-house">
+      {computerSide && <div className='computer-side'><h1>The house picked</h1></div>}
       {computerChoice !== null && renderComputerComponent()}
-      <button onClick={handleChoiceClick}>me</button>
+      </div>
+    
+      
     </div>
   );
 };

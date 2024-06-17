@@ -34,12 +34,26 @@ $Barlow-font: "Barlow Semi Condensed", sans-serif;
   align-items: center;
 }
 .computer-choice {
-  display: flex;
-  flex-direction: column;
-  margin: auto 360px !important;
-  margin-top: -145px !important;
-  gap: 50px;
-
+    margin: auto 360px !important;
+    margin-top: -145px !important;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    .the-house{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+      
+    }
+    .results{
+        .result{
+            background-color: #f0f0f0;
+            align-items: center;
+            justify-content: center;
+            margin-left: -100px;
+        }
+    }
+ 
   button {
     display: none;
   }
